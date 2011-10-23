@@ -2,7 +2,7 @@ package bad.robot.refactoring.chapter1;
 
 import org.junit.Test;
 
-import static bad.robot.refactoring.chapter1.Movie.Classification.*;
+import static bad.robot.refactoring.chapter1.Classification.*;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
