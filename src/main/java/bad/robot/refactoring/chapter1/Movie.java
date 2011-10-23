@@ -5,9 +5,32 @@ import static bad.robot.refactoring.chapter1.Movie.Classification.NEW_RELEASE;
 public class Movie {
 
     public enum Classification {
-        CHILDREN,
-        REGULAR,
-        NEW_RELEASE;
+        CHILDREN {
+            @Override
+            public double getCharge(int daysRented) {
+                double amount = 1.5;
+                if (daysRented > 3)
+                    amount += (daysRented - 3) * 1.5;
+                return amount;
+            }
+        },
+        REGULAR {
+            @Override
+            public double getCharge(int daysRented) {
+                double amount = 2;
+                if (daysRented > 2)
+                    amount += (daysRented - 2) * 1.5;
+                return amount;
+            }
+        },
+        NEW_RELEASE {
+            @Override
+            public double getCharge(int daysRented) {
+                return daysRented * 3;
+            }
+        };
+
+        public abstract double getCharge(int daysRented);
     }
 
     private String title;
@@ -23,23 +46,7 @@ public class Movie {
     }
 
     double getChargeFor(int daysRented) {
-        double amount = 0;
-        switch (classification) {
-            case REGULAR:
-                amount += 2;
-                if (daysRented > 2)
-                    amount += (daysRented - 2) * 1.5;
-                break;
-            case NEW_RELEASE:
-                amount += daysRented * 3;
-                break;
-            case CHILDREN:
-                amount += 1.5;
-                if (daysRented > 3)
-                    amount += (daysRented - 3) * 1.5;
-                break;
-        }
-        return amount;
+        return classification.getCharge(daysRented);
     }
 
     public int getFrequentRentalPoints(int daysRented) {
