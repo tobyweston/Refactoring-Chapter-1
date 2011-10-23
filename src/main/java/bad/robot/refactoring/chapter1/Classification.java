@@ -25,7 +25,18 @@ public enum Classification {
         public double getCharge(int daysRented) {
             return daysRented * 3;
         }
+
+        @Override
+        public int getFrequentRentalPoints(int daysRented) {
+            if (daysRented > 1)
+                return 2;
+            return 1;
+        }
     };
 
     public abstract double getCharge(int daysRented);
+
+    public int getFrequentRentalPoints(int daysRented) {
+        return 1;
+    }
 }
