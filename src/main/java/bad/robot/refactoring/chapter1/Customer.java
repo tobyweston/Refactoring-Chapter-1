@@ -28,22 +28,7 @@ public class Customer {
 
         String result = "Rental record for " + getName() + "\n";
         for (Rental rental : rentals) {
-            double amount = 0;
-            switch (rental.getMovie().getClassification()) {
-                case REGULAR:
-                    amount += 2;
-                    if (rental.getDaysRented() > 2)
-                        amount += (rental.getDaysRented() - 2) * 1.5;
-                    break;
-                case NEW_RELEASE:
-                    amount += rental.getDaysRented() * 3;
-                    break;
-                case CHILDREN:
-                    amount += 1.5;
-                    if (rental.getDaysRented() > 3)
-                        amount += (rental.getDaysRented() - 3) * 1.5;
-                    break;
-            }
+            double amount = amountFor(rental);
 
             // add frequent renter points
             frequentRenterPoints++;
@@ -61,5 +46,25 @@ public class Customer {
         result += "You earned " + String.valueOf(frequentRenterPoints) + " frequent renter points";
 
         return result;
+    }
+
+    private double amountFor(Rental rental) {
+        double amount = 0;
+        switch (rental.getMovie().getClassification()) {
+            case REGULAR:
+                amount += 2;
+                if (rental.getDaysRented() > 2)
+                    amount += (rental.getDaysRented() - 2) * 1.5;
+                break;
+            case NEW_RELEASE:
+                amount += rental.getDaysRented() * 3;
+                break;
+            case CHILDREN:
+                amount += 1.5;
+                if (rental.getDaysRented() > 3)
+                    amount += (rental.getDaysRented() - 3) * 1.5;
+                break;
+        }
+        return amount;
     }
 }
