@@ -1,5 +1,7 @@
 package bad.robot.refactoring.chapter1;
 
+import static bad.robot.refactoring.chapter1.Movie.Classification.NEW_RELEASE;
+
 public class Movie {
 
     public enum Classification {
@@ -42,5 +44,11 @@ public class Movie {
                 break;
         }
         return amount;
+    }
+
+    public int getFrequentRentalPoints(int daysRented) {
+        if (classification == NEW_RELEASE && daysRented > 1)
+            return 2;
+        return 1;
     }
 }

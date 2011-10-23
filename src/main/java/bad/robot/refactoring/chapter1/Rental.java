@@ -1,7 +1,5 @@
 package bad.robot.refactoring.chapter1;
 
-import static bad.robot.refactoring.chapter1.Movie.Classification.NEW_RELEASE;
-
 public class Rental {
 
     private Movie movie;
@@ -25,8 +23,6 @@ public class Rental {
     }
 
     int getFrequentRentalPoints() {
-        if (getMovie().getClassification() == NEW_RELEASE && getDaysRented() > 1)
-            return 2;
-        return 1;
+        return movie.getFrequentRentalPoints(daysRented);
     }
 }
