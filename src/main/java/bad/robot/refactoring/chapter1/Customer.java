@@ -30,14 +30,19 @@ public class Customer {
 
             // show figures for this rental
             result += "\t" + rental.getMovie().getTitle() + "\t" + String.valueOf(rental.getCharge()) + "\n";
-
-            totalAmount += rental.getCharge();
         }
 
-        result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
+        result += "Amount owed is " + String.valueOf(getTotalCharge()) + "\n";
         result += "You earned " + String.valueOf(frequentRenterPoints) + " frequent renter points";
 
         return result;
+    }
+
+    private double getTotalCharge() {
+        double total = 0;
+        for (Rental rental : rentals)
+            total += rental.getCharge();
+        return total;
     }
 
 }
