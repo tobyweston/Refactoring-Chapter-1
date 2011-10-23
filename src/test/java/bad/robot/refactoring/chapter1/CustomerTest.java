@@ -2,14 +2,15 @@ package bad.robot.refactoring.chapter1;
 
 import org.junit.Test;
 
+import static bad.robot.refactoring.chapter1.Movie.Classification.*;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class CustomerTest {
 
-    private static final Movie THE_HULK = new Movie("The Hulk", Movie.CHILDREN);
-    private static final Movie IRON_MAN = new Movie("Iron Man 4", Movie.NEW_RELEASE);
-    private static final Movie SPIDER_MAN = new Movie("Spiderman", Movie.REGULAR);
+    private static final Movie THE_HULK = new Movie("The Hulk", CHILDREN);
+    private static final Movie IRON_MAN = new Movie("Iron Man 4", NEW_RELEASE);
+    private static final Movie SPIDER_MAN = new Movie("Spiderman", REGULAR);
 
     private final Customer customer = new Customer("fred");
 

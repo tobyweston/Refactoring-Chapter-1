@@ -2,28 +2,25 @@ package bad.robot.refactoring.chapter1;
 
 public class Movie {
 
-    public static final int CHILDREN = 2;
-    public static final int REGULAR = 0;
-    public static final int NEW_RELEASE = 1;
+    public enum Classification {
+        CHILDREN,
+        REGULAR,
+        NEW_RELEASE;
+    }
 
     private String title;
-    private int priceCode;
+    private Classification classification;
 
-    public Movie(String title, int priceCode) {
+    public Movie(String title, Classification classification) {
         this.title = title;
-        this.priceCode = priceCode;
+        this.classification = classification;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public int getPriceCode() {
-        return priceCode;
+    public Classification getClassification() {
+        return classification;
     }
-
-    public void setPriceCode(int priceCode) {
-        this.priceCode = priceCode;
-    }
-
 }
