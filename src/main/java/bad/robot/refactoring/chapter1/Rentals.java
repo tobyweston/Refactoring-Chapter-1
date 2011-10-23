@@ -11,7 +11,7 @@ public class Rentals {
         rentals.add(rental);
     }
 
-    public double getTotalAmount() {
+    public double getTotalCharge() {
         double amount = 0;
         for (Rental rental : rentals)
             amount += rental.getCharge();
@@ -27,7 +27,7 @@ public class Rentals {
 
     public String getStatement() {
         String result = getSummary();
-        result += "Amount owed is " + String.valueOf(getTotalAmount()) + "\n";
+        result += "Amount owed is " + String.valueOf(getTotalCharge()) + "\n";
         result += "You earned " + String.valueOf(getTotalFrequentRenterPoints()) + " frequent renter points";
         return result;
     }
