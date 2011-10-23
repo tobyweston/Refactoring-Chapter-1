@@ -25,7 +25,14 @@ public class Rentals {
         return total;
     }
 
-    public String getSummary() {
+    public String getStatement() {
+        String result = getSummary();
+        result += "Amount owed is " + String.valueOf(getTotalAmount()) + "\n";
+        result += "You earned " + String.valueOf(getTotalFrequentRenterPoints()) + " frequent renter points";
+        return result;
+    }
+
+    private String getSummary() {
         String summary = "";
         for (Rental rental : rentals)
             summary += "\t" + rental.getMovie().getTitle() + "\t" + String.valueOf(rental.getCharge()) + "\n";

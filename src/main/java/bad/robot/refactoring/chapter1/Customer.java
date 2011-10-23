@@ -18,11 +18,7 @@ public class Customer {
     }
 
     public String statement() {
-        String result = "Rental record for " + getName() + "\n";
-        result += rentals.getSummary();
-        result += "Amount owed is " + String.valueOf(rentals.getTotalAmount()) + "\n";
-        result += "You earned " + String.valueOf(rentals.getTotalFrequentRenterPoints()) + " frequent renter points";
-        return result;
+        return "Rental record for " + getName() + "\n" + rentals.getStatement();
     }
 
 }
