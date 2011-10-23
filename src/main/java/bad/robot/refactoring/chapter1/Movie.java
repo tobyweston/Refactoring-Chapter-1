@@ -22,10 +22,6 @@ public class Movie {
         return title;
     }
 
-    public Classification getClassification() {
-        return classification;
-    }
-
     double getChargeFor(int daysRented) {
         double amount = 0;
         switch (classification) {
