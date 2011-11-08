@@ -6,8 +6,7 @@ If you'd like to have a go at home, follow these steps.
 * Fork the repository in github. Click the 'Fork' button.
 * Setup your local repository. 
 
-    `cd <parent folder of your choice>
-    git clone git@github.com:user/Refactoring-Chapter-1.git`
+    `git clone git@github.com:user/Refactoring-Chapter-1.git`
 
 * Create a new branch from the 1.0 tag. Use your name for the branch.
     
