@@ -7,7 +7,7 @@ Look through the revision history to see how Fowler gets from the start (the 1.0
 
 ### Tags
 1.0 - The initial commit tag, this is the starting place if you want to play along at home. 
-See [playing along at home](play_along.md) for checkout instructions
+See [playing along at home](blob/master/play_along.md) for checkout instructions
 
 ### Branches
 more-oo - replaying chapter 1 but working towards as an OO design as I can. This branch explores alternative solutions. 
