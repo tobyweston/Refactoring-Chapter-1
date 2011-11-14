@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_6">
+	<output-test url="file://$MODULE_DIR$/target/test-classes"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<testFolder url="file://$MODULE_DIR$/src/test/java"/>
+		<excludeFolder url="file://$MODULE_DIR$/target"/>
+	</contentEntry>
+	<lib name="Maven: junit:junit:4.8.1" scope="TEST"/>
+	<lib name="Maven: org.jmock:jmock-junit4:2.5.1" scope="TEST"/>
+	<lib name="Maven: org.jmock:jmock:2.5.1" scope="TEST"/>
+	<lib name="Maven: org.hamcrest:hamcrest-core:1.1" scope="TEST"/>
+	<lib name="Maven: org.hamcrest:hamcrest-library:1.1" scope="TEST"/>
+	<lib name="Maven: junit:junit-dep:4.4" scope="TEST"/>
+	<lib name="Maven: org.jmock:jmock-legacy:2.5.1" scope="TEST"/>
+	<lib name="Maven: org.objenesis:objenesis:1.0" scope="TEST"/>
+	<lib name="Maven: cglib:cglib-nodep:2.1_3" scope="TEST"/>
+</component>
