@@ -14,6 +14,7 @@ public class Rental {
         return movie;
     }
 
+    // can delete this now
     public int getDaysRented() {
         return daysRented;
     }
@@ -23,8 +24,7 @@ public class Rental {
     }
 
     public int getFrequentRenterPoints() {
-        if (getMovie().getPriceCode() == Movie.NEW_RELEASE && getDaysRented() > 1)
-            return 2;
-        return 1;
+        return movie.getFrequentRenterPoints(daysRented);
     }
+
 }
