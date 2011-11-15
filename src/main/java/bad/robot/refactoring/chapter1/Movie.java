@@ -26,7 +26,7 @@ public class Movie {
         this.priceCode = priceCode;
     }
 
-    double getMovieCharge(int daysRented) {
+    double getCharge(int daysRented) {
         double amount = 0;
         switch (getPriceCode()) {
             case REGULAR:
