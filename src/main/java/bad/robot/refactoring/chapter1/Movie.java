@@ -18,10 +18,6 @@ public class Movie {
         return title;
     }
 
-    public int getPriceCode() {
-        return price.getPriceCode();
-    }
-
     public void setPrice(int priceCode) {
         switch (priceCode) {
             case REGULAR:
