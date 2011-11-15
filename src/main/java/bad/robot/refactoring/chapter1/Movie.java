@@ -25,28 +25,13 @@ public class Movie {
     public void setPrice(int priceCode) {
         switch (priceCode) {
             case REGULAR:
-                price = new Price() {
-                    @Override
-                    int getPriceCode() {
-                        return REGULAR;
-                    }
-                };
+                price = new RegularPrice();
                 break;
             case CHILDREN:
-                price = new Price() {
-                    @Override
-                    int getPriceCode() {
-                        return CHILDREN;
-                    }
-                };
+                price = new ChildrensPrice();
                 break;
             case NEW_RELEASE:
-                price = new Price() {
-                    @Override
-                    int getPriceCode() {
-                        return NEW_RELEASE;
-                    }
-                };
+                price = new NewReleasePrice();
                 break;
             default:
                 throw new IllegalArgumentException();
@@ -78,4 +63,5 @@ public class Movie {
             return 2;
         return 1;
     }
+
 }
