@@ -4,11 +4,5 @@ public abstract class Price {
 
     abstract int getPriceCode();
 
-    double getCharge(int daysRented) {
-        double amount = 0;
-        switch (getPriceCode()) {
-            // none left!
-        }
-        return amount;
-    }
+    abstract double getCharge(int daysRented);
 }
