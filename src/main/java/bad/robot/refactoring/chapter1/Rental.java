@@ -14,11 +14,6 @@ public class Rental {
         return movie;
     }
 
-    // can delete this now
-    public int getDaysRented() {
-        return daysRented;
-    }
-
     public double getCharge() {
         return movie.getCharge(daysRented);
     }
