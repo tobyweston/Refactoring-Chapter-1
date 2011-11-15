@@ -7,14 +7,7 @@ public abstract class Price {
     double getCharge(int daysRented) {
         double amount = 0;
         switch (getPriceCode()) {
-            case Movie.NEW_RELEASE:
-                amount += daysRented * 3;
-                break;
-            case Movie.CHILDREN:
-                amount += 1.5;
-                if (daysRented > 3)
-                    amount += (daysRented - 3) * 1.5;
-                break;
+            // none left!
         }
         return amount;
     }
