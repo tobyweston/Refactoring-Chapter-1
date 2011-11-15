@@ -7,11 +7,11 @@ public class Movie {
     public static final int NEW_RELEASE = 1;
 
     private String title;
-    private int priceCode;
+    private Price price;
 
     public Movie(String title, int priceCode) {
         this.title = title;
-        setPriceCode(priceCode);
+        setPrice(priceCode);
     }
 
     public String getTitle() {
@@ -19,11 +19,38 @@ public class Movie {
     }
 
     public int getPriceCode() {
-        return priceCode;
+        return price.getPriceCode();
     }
 
-    public void setPriceCode(int priceCode) {
-        this.priceCode = priceCode;
+    public void setPrice(int priceCode) {
+        switch (priceCode) {
+            case REGULAR:
+                price = new Price() {
+                    @Override
+                    int getPriceCode() {
+                        return REGULAR;
+                    }
+                };
+                break;
+            case CHILDREN:
+                price = new Price() {
+                    @Override
+                    int getPriceCode() {
+                        return CHILDREN;
+                    }
+                };
+                break;
+            case NEW_RELEASE:
+                price = new Price() {
+                    @Override
+                    int getPriceCode() {
+                        return NEW_RELEASE;
+                    }
+                };
+                break;
+            default:
+                throw new IllegalArgumentException();
+        }
     }
 
     double getCharge(int daysRented) {
