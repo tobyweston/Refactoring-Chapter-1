@@ -10,7 +10,7 @@ If you'd like to have a go at home, follow these steps.
 
 * Create a new branch from the 1.0 tag. Use your name for the branch.
     
-    `git checkout -b 1.0 bill_and_ben`
+    `git checkout -b bill_and_ben 1.0`
 
 * Go crazy. That's to say, code away, commit often then when you're done…
 * Request the master pull your changes with a [pull request](http://help.github.com/send-pull-requests/).
