@@ -1,5 +1,7 @@
 ## Refactoring: Improving the Design of Existing Code
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-lkiccO8h6w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Java code following along with the first chapter of Martin Fowler's book. 
 
 ### HEAD
