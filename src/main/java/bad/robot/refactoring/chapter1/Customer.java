@@ -26,7 +26,7 @@ public class Customer {
 
         String result = "Rental record for " + getName() + "\n";
         for (Rental rental : rentals) {
-            double amount = getAmount(rental);
+            double amount = getChargeFor(rental);
 
             // add frequent renter points
             frequentRenterPoints++;
@@ -46,7 +46,7 @@ public class Customer {
         return result;
     }
 
-	private double getAmount(Rental rental) {
+	private double getChargeFor(Rental rental) {
 		double amount = 0;
 		switch (rental.getMovie().getPriceCode()) {
 		    case Movie.REGULAR:
